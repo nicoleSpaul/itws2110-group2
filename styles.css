@@ -126,6 +126,10 @@ body {
    padding: 0%;
 }
 
+.resume-link {
+   color:white;
+}
+
 .logo-image {
    position: relative;
    height: 80%;
