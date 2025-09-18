@@ -1,0 +1,45 @@
+.team-section {
+   padding-left: 30px;
+   padding-top: 30px;
+}
+
+.member {
+   display: flex;
+   flex-direction: row;
+}
+
+.member-info {
+   list-style: none;
+   font-family: "Karla", sans-serif;
+   font-weight: 600;
+   color:white;
+   font-size: 25px
+}
+
+h1 {
+   font-family: "Karla", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 650;
+   font-style: normal;
+   color:white;
+   font-size: 60px;
+   margin: 0;
+}
+
+.page {
+   height: 1400px;
+   width:auto;
+   background-color: #0B3D91;
+}
+
+.headshot {
+   width:250;
+   height:250;
+   padding-left: 30;
+   margin: 20px
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
