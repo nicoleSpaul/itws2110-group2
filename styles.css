@@ -198,6 +198,11 @@ body {
   font-size: 25px;
 }
 
+.member-name {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 h1 {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
