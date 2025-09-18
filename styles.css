@@ -182,7 +182,6 @@ body {
 
 .team-section {
   padding-left: 30px;
-  padding-top: 30px;
 }
 
 .member {
@@ -204,12 +203,12 @@ body {
 }
 
 h1 {
-  font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 650;
-  font-style: normal;
-  font-size: 50px;
-  margin: 0;
+  font-size: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 500;
 }
 
 .page {
@@ -236,6 +235,7 @@ html {
 }
 
 .container {
+  padding-top: 30px;
   flex-direction: column;
   color: white;
 }
