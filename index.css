@@ -36,10 +36,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#logoImage {
-  position: relative;
-}
-
 .center-menutext-right {
   position: relative;
   float: right;
@@ -84,12 +80,34 @@
 
 .message {
   position: relative;
-  border: 1px solid red;
   float: left;
   margin-left: 10%;
   margin-top: 50px;
   width: 80%;
-  height: 500px;
+  aspect-ratio: 1/0.5;
+  padding: 0%;
+}
+
+.logo-image {
+  position: relative;
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-left: 5%;
+}
+
+#motto {
+  color: white;
+  font-size: 5vw;
+}
+
+.motto {
+  all: unset;
+  margin: none;
+  position: relative;
+  float: right;
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-right: 5%;
 }
 
 .bg {
