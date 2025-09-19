@@ -16,6 +16,10 @@ I worked on the Team page for this lab that includes each person's name, major, 
 helped me catch a lot of my syntax errors, making my code aligned with the typical HTML/CSS standards and the rest of my team. I also ran into some merge conflicts so I had to
 refresh my memory on how to resolve them. The team collaborated well together overall.
 
+### Nicole
+
+I worked on the Homepage (index.html) for this lab that includes our team name, logo and motto. Since designing the UI for this page was relatively simple compared to the other pages, I also designed the menu bar along the top. I had some difficulties in making sure the logo and the menu scaled well wth resizing the screen, but figuring out how to resize based on the window size helped, especially for adjusting the font size. We had a few issues when merging all our branches together that some of our CSS elements conflicted, but in the end we were able to communicate well during our meeting to fix everything. I thought we all worked together well!
+
 ### Cites Sources:
 https://www.w3schools.com/css/css3_flexbox.asp
 https://www.w3schools.com/cssref/pr_text_text-decoration.php
@@ -23,3 +27,6 @@ https://www.w3schools.com/cssref/pr_font_weight.php
 https://www.webfx.com/blog/web-design/ultimate-guide-to-microformats-reference-and-examples/
 https://microformats.org/wiki/vcard-implementations
 https://microformats.org/wiki/hcard-examples#:~:text=A%20common%20pattern%20in%20blog,from%20the%20Internal%20Revenue%20Service.
+https://www.w3schools.com/cssref/css_units.php
+https://fonts.google.com/specimen/Karla
+https://fonts.google.com/?query=Kantumruy
