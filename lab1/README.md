@@ -1,1 +1,1 @@
-This is the lab1 assignment for Group 1. It includes our team page and each members resume.
+This is the lab1 assignment for Group 1. It includes our team page and each members' resume.
