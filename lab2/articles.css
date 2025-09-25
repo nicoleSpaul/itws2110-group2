@@ -37,18 +37,6 @@ body {
   text-align: center;
 }
 
-.divider {
-  border-right: 1px solid gray;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 100vh;
-}
-
-.left-side,
-.right-side {
-  width: 50%;
-}
-
 .articles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
