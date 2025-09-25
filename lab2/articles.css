@@ -63,3 +63,7 @@ body {
 .spacing {
   margin-top: 20px;
 }
+
+.highlight {
+  background-color: #ff7c7c4e;
+}
