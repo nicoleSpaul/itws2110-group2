@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
+
+body {
+  background-color: #eadcd5;
+  font-family: "Kaisei Tokumin", serif;
+}
+
+.page-header {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 600;
+}
+
+.amendment-header {
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.amendments {
+  display: block;
+}
+
+.amendment,
+.analysis {
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.amendment-header {
+  text-align: center;
+}
+
+.amendments-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 24px;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.amendments-grid::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: gray;
+  transform: translateX(-0.5px);
+  pointer-events: none;
+}
+
+.spacing {
+  margin-top: 20px;
+}
+
+.highlight {
+  background-color: #5090ff4e;
+}
