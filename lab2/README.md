@@ -6,6 +6,11 @@ In Lab 2, we were assigned to make a website with Amendments I-X and Articles I-
 
 In this lab, I worked on the analysis of Articles 3 and 7, and the analysis of the Fourth and Eighth Amendments. I also worked on the HTML and CSS for the History page after designing the wireframes on Figma as a group. I did not encounter any issues when creating the History page for this lab. It served as a good review for me as I was able to practice sizing images and aligning text to the center of the page.
 
+### Dana
+For this lab, I analyzed Article 4, Amendment 1, 5, 9, and the History section of the Constitution. As a team, we worked together to plan the website design on Figma and then
+sectioned out the work between the four of us. I enjoyed researching the Constitution's history and I realized how much of the history I forgot from several years ago. I also
+liked that I could add my own opinions to the analysis. Overall, this lab was fun to design and learn about.
+
 ### Cited Sources
 
 https://www.w3schools.com/css/css_grid.asp
