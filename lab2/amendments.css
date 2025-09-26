@@ -3,6 +3,10 @@
 body {
   background-color: #eadcd5;
   font-family: "Kaisei Tokumin", serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .page-header {
@@ -66,4 +70,104 @@ body {
 
 .highlight {
   background-color: #5090ff4e;
+}
+
+#star-left {
+  position: absolute;
+  top: 20px;
+  left: 5vw;
+  height: 35px;
+  z-index: 20;
+}
+
+#star-right {
+  position: absolute;
+  top: 20px;
+  right: 5vw;
+  height: 35px;
+  z-index: 20;
+}
+
+#off-set {
+  display: inline-block;
+  width: 29vw;
+  height: 100%;
+}
+
+#nav-bar {
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  height: 60;
+}
+
+#nav-bar ul li.offset {
+  display: inline-block;
+  position: relative;
+  width: 20vw;
+}
+
+#nav-bar ul {
+  margin: 0;
+  list-style: none;
+  background: white;
+  align-items: center;
+}
+
+#menu {
+  margin: 0;
+}
+
+#nav-bar ul li.menu-item {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 10vw;
+  margin-right: 2vw;
+  height: 60px;
+  padding-top: calc(30px - 0.75vw);
+}
+
+.mi {
+  height: 60px;
+}
+
+#nav-bar ul li.menu-item a {
+  display: block;
+  text-align: center;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+}
+
+#nav-bar ul li ul.drop-down li {
+  display: block;
+}
+
+#nav-bar ul li ul.drop-down li a {
+  font-size: 1vw;
+  display: block;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: black;
+}
+
+#nav-bar ul li ul.drop-down {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#nav-bar ul li:hover ul.drop-down {
+  display: block;
+}
+
+#nav-bar ul li:hover {
+  background: lightgray;
 }
