@@ -212,3 +212,53 @@ html {
   object-fit: cover;
 
 }
+
+.time-slider {
+  width: 80%;
+  margin: 30px auto 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.slider-label {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 8px;
+  background: white;
+  outline: none;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 26px;
+  border-radius: 50px;
+  background: black;
+  cursor: pointer;
+}
+
+#selectedDate {
+  font-size: 22px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  color: white;
+  margin-left: 15px;
+  display: inline-block;
+  width: 215px;
+  text-align: left;
+}
