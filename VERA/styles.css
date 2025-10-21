@@ -262,3 +262,17 @@ html {
   width: 215px;
   text-align: left;
 }
+
+.time-slider select {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 12px;
+  margin-left: 5px;
+  appearance: none;
+  cursor: pointer;
+}
