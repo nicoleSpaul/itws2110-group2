@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <!-- 
@@ -42,6 +41,7 @@
 
     <div class="top-menu-holder"></div>
 
+    <!-- Time Slider -->
     <div class="time-slider">
       <label for="dateRange" class="slider-label">Select Date:</label>
       <input
@@ -60,24 +60,46 @@
       <select id="yearSelect"></select>
     </div>
 
-    <div class="message">
-      <em>Map here!</em>
+    <div class="content">
+
+      <!-- Map -->
+      <div class="message">
+        <em>Map here!</em>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <h3 class="legend-title"><u>Legend</u></h3>
+        <div class="legend-item">
+          <div class="color-box" style="background-color: #0000BE;"></div>
+          <span>5-10 inches</span>
+        </div>
+        <div class="legend-item">
+          <div class="color-box" style="background-color: #3E78FF;"></div>
+          <span>2-4.9 inches</span>
+        </div>
+        <div class="legend-item">
+          <div class="color-box" style="background-color: #C6DBFF;"></div>
+          <span>0-1.9 inches</span>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-  </body>
 
-  <div id="footer">
-    <ul>
-      <li class="kantumruy-pro-bold">Contact Us:</li>
-      <li class="kantumruy-pro">Nicole Spaulding - spauln@rpi.edu</li>
-      <li class="kantumruy-pro">Priscilla Wong - wongp4@rpi.edu</li>
-      <li class="kantumruy-pro">Courteney Sit - sitc@rpi.edu</li>
-      <li class="kantumruy-pro">Dana Siong Sin - siongd@rpi.edu</li>
-    </ul>
-    <div id="footer-imgs">
-      <img src="images/nasaLogo.png" class="logo-image" alt="NASA logo" />
-      <img src="images/rensselaerLogo.png" class="logo-image" alt="RPI logo" />
+    <div id="footer">
+      <ul>
+        <li class="kantumruy-pro-bold">Contact Us:</li>
+        <li class="kantumruy-pro">Nicole Spaulding - spauln@rpi.edu</li>
+        <li class="kantumruy-pro">Priscilla Wong - wongp4@rpi.edu</li>
+        <li class="kantumruy-pro">Courteney Sit - sitc@rpi.edu</li>
+        <li class="kantumruy-pro">Dana Siong Sin - siongd@rpi.edu</li>
+      </ul>
+      <div id="footer-imgs">
+        <img src="images/nasaLogo.png" class="logo-image" alt="NASA logo" />
+        <img src="images/rensselaerLogo.png" class="logo-image" alt="RPI logo" />
+      </div>
     </div>
-  </div>
+
+  </body>
 </html>
