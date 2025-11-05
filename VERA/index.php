@@ -72,15 +72,15 @@
         <h3 class="legend-title"><u>Legend</u></h3>
         <div class="legend-item">
           <div class="color-box" style="background-color: #0000BE;"></div>
-          <span>5-10 inches</span>
+          <span>500+ cases</span>
         </div>
         <div class="legend-item">
           <div class="color-box" style="background-color: #3E78FF;"></div>
-          <span>2-4.9 inches</span>
+          <span>100-499 cases</span>
         </div>
         <div class="legend-item">
           <div class="color-box" style="background-color: #C6DBFF;"></div>
-          <span>0-1.9 inches</span>
+          <span>< 99 cases</span>
         </div>
       </div>
     </div>
