@@ -1,0 +1,48 @@
+{
+    "websys_course": {
+        "lectures": {
+            "lecture1": {
+                "title": "",
+                "description": ""
+            },
+            "lecture2": {
+                "title": "",
+                "description": ""
+            },
+            "lecture3": {
+                "title": "",
+                "description": ""
+            }
+        },
+        "labs": {
+            "lab1": {
+                "title": "",
+                "description": ""
+            },
+            "lab2": {
+                "title": "",
+                "description": ""
+            },
+            "lab3": {
+                "title": "",
+                "description": ""
+            },
+            "lab4": {
+                "title": "",
+                "description": ""
+            },
+            "lab5": {
+                "title": "",
+                "description": ""
+            },
+            "lab6": {
+                "title": "",
+                "description": ""
+            },
+            "lab7": {
+                "title": "",
+                "description": ""
+            }
+        }
+    }
+}
