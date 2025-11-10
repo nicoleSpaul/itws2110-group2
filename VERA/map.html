@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERA</title>
+  <link
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="map.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+
+  <script>
+    const map = L.map("map").setView([0, 20], 3);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 6,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json")
+      .then(world => {
+        const countries = topojson.feature(world, world.objects.countries).features;
+
+        const africa = countries.filter(f => {
+          const [minX, minY, maxX, maxY] = d3.geoBounds(f).flat();
+          return maxY >= -35 && minY <= 37 && maxX >= -20 && minX <= 52; // estimate of africa
+        });
+
+    const colorScale = d3.scaleSequential()
+      .domain([0, 1])
+      .interpolator(d3.interpolateOrRd);
+
+    const geojson = L.geoJSON(africa, {
+      style: feature => {
+      const randomValue = Math.random();
+      return {
+        color: "#fff",
+        weight: 1,
+        fillColor: colorScale(randomValue),
+        fillOpacity: 1
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        layer.on({
+          mouseover: e => {
+            const l = e.target;
+            l.setStyle({
+              fillColor: "#ffcc00",
+              weight: 2,
+              color: "#333"
+            });
+            l.bringToFront();
+          },
+          mouseout: e => { geojson.resetStyle(e.target);}
+        });
+      }
+    }).addTo(map);
+    geojson.addTo(map);
+    }).catch(err => console.error("TopoJSON load error:", err));
+  </script>
+</body>
+</html>

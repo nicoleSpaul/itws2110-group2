@@ -16,7 +16,7 @@
     <div class="bg"></div>
     <div class="top-menu">
       <h1 id="menu-title">
-        <a href="index.html" class="unformatted-link">
+        <a href="index.php" class="unformatted-link">
           <em class="karla">VERA</em>
         </a>
       </h1>
