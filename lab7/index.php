@@ -59,24 +59,59 @@ $data = json_decode($jsonData, true);
 $course = $data["websys_course"];
 ?>
 
-<div class="sidebar">
-    <h1>Web Systems Content</h1>
-    <h2>Lectures</h2>
-    <div class="item-list">
-        <?php foreach ($course["lectures"] as $key => $lecture): ?>
-            <div class="item">
-                <h3><?= htmlspecialchars($lecture["title"] ?: ucfirst($key)) ?></h3>
-                <p><?= htmlspecialchars($lecture["description"] ?: "No description available.") ?></p>
-            </div>
-        <?php endforeach; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+
+<div class="site">
+    <div class="sidebar-content">
+        <h1>Web Systems Content</h1>
+        <button onclick="location.reload()">Refresh</button>
+        <h2>Lectures</h2>
+        <ul>
+            <?php foreach ($course["lectures"] as $key => $lecture): ?>
+                <li class="item" 
+                    data-title="<?= htmlspecialchars($lecture["title"]) ?>"
+                    data-description="<?= htmlspecialchars($lecture["description"]) ?>">
+                    <?= htmlspecialchars($lecture["title"] ?: ucfirst($key)) ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <h2>Labs</h2>
+        <ul>
+            <?php foreach ($course["labs"] as $key => $lab): ?>
+                <li class="item"
+                    data-title="<?= htmlspecialchars($lab["title"]) ?>"
+                    data-description="<?= htmlspecialchars($lab["description"]) ?>">
+                    <?= htmlspecialchars($lab["title"] ?: ucfirst($key)) ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
-    <h2>Labs</h2>
-    <div class="item-list">
-        <?php foreach ($course["labs"] as $key => $lab): ?>
-            <div class="item">
-                <h3><?= htmlspecialchars($lab["title"] ?: ucfirst($key)) ?></h3>
-                <p><?= htmlspecialchars($lab["description"] ?: "No description available.") ?></p>
-            </div>
-        <?php endforeach; ?>
+    <div id="content">
+        <h2>Select a lecture or lab</h2>
+        <p></p>
     </div>
+    <script>
+    document.querySelectorAll('.item').forEach(item => {
+        item.addEventListener('click', () => {
+            const title = item.dataset.title;
+            const desc = item.dataset.description;
+
+            const main = document.getElementById('content');
+            main.innerHTML = `
+                <h2>${title}</h2>
+                <p>${desc}</p>
+            `;
+        });
+    });
+    </script>
 </div>
+</html>

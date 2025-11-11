@@ -1,5 +1,13 @@
-.sidebar {
-   background-color: rgb(54, 0, 108);
+html,body {
+    margin: 0;
+}
+.sidebar-content {
+    background-color: rgb(49, 0, 98);
+    font-family: "Pirata One", system-ui;
+    width: 250px;
+    height: 600px;
+    padding-left: 15px;
+    color:#fff
 }
 .item-list {
     display: grid;
@@ -7,8 +15,34 @@
 }
 
 .item {
-    background-color: #fff;
+    /* background-color: #fff;
     border-radius: 8px;
     padding: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+    /* gap: 15px; */
+    margin-bottom: 10px;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.site {
+    display: flex;
+    flex-direction: row;
+}
+
+#content {
+   font-family: "Pirata One", system-ui;
+   padding-left: 20px;
+   color: black;
+}
+
+li {
+    list-style: none;
+    background-color: none;
+}
+
+h2 {
+    padding:0;
 }
