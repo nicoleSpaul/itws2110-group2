@@ -81,3 +81,11 @@ SELECT c.title, COUNT(DISTINCT g.RIN) AS num_students
 FROM grades g
 JOIN courses c ON g.crn = c.crn
 GROUP BY c.crn;
+
+## Priscilla README
+
+In this lab, we had to collaborate with our groups to create a new version of LMS for Web Systems. We faced challenges with understanding how to collaborate on the database and how to host the website on AWS. After these initial challenges, we were able to complete our parts. I worked on Part 2 of the lab where I had to use SQL to modify and create existing tables. I used online references to go over SQL syntax before performing the tasks.
+
+Resources:
+https://www.w3schools.com/sql/sql_syntax.asp
+https://www.codecademy.com/article/sql-commands
