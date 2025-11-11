@@ -22,9 +22,9 @@ SQL;
 
 try {
     $pdo->exec($sql);
-    echo "Table 'courses' and 'students' created successfully or already exists.";
+    // echo "Table 'courses' and 'students' created successfully or already exists.";
 } catch (PDOException $e) {
-    echo "Error creating table: " . $e->getMessage();
+    // echo "Error creating table: " . $e->getMessage();
 }
 
 try {
@@ -40,15 +40,15 @@ try {
     
     $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    print_r($courses);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($courses);
+    // echo "</pre>";
 
 } catch (PDOException $e) {
     if ($e->errorInfo[1] == 1062) {
-        echo "Error: Could not insert. A course with one of those CRNs already exists.";
+        // echo "Error: Could not insert. A course with one of those CRNs already exists.";
     } else {
-        echo "Error inserting rows: " . $e->getMessage();
+        // echo "Error inserting rows: " . $e->getMessage();
     }
 }
 
@@ -63,12 +63,12 @@ try {
             ADD COLUMN zip CHAR(10);";
     
     $pdo->exec($sql);
-    echo "Address fields added to 'students' table successfully.";
+    // echo "Address fields added to 'students' table successfully.";
 } catch (PDOException $e) {
     if ($e->errorInfo[1] == 1060) {
-        echo "Address fields already exist in 'students' table.";
+        // echo "Address fields already exist in 'students' table.";
     } else {
-        echo "Error adding address fields: " . $e->getMessage();
+        // echo "Error adding address fields: " . $e->getMessage();
     }
 }
 
@@ -79,12 +79,12 @@ try {
             ADD COLUMN year YEAR;";
     
     $pdo->exec($sql);
-    echo "Section and year fields added to 'courses' table successfully.";
+    // echo "Section and year fields added to 'courses' table successfully.";
 } catch (PDOException $e) {
     if ($e->errorInfo[1] == 1060) {
-        echo "Section and year fields already exist in 'courses' table.";
+        // echo "Section and year fields already exist in 'courses' table.";
     } else {
-        echo "Error adding section and year fields: " . $e->getMessage();
+        // echo "Error adding section and year fields: " . $e->getMessage();
     }
 }
 
@@ -100,9 +100,9 @@ try {
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
     
     $pdo->exec($sql);
-    echo "Table 'grades' created successfully or already exists.";
+    // echo "Table 'grades' created successfully or already exists.";
 } catch (PDOException $e) {
-    echo "Error creating 'grades' table: " . $e->getMessage();
+    // echo "Error creating 'grades' table: " . $e->getMessage();
 }
 
 // 4. INSERT at least 4 courses into the courses table
@@ -115,9 +115,9 @@ try {
             ON DUPLICATE KEY UPDATE title=VALUES(title);";
     
     $pdo->exec($sql);
-    echo "Courses inserted successfully or already exist.";
+    // echo "Courses inserted successfully or already exist.";
 } catch (PDOException $e) {
-    echo "Error inserting courses: " . $e->getMessage();
+    // echo "Error inserting courses: " . $e->getMessage();
 }
 
 // 5. INSERT at least 4 students into the students table
@@ -130,9 +130,9 @@ try {
             ON DUPLICATE KEY UPDATE first_name=VALUES(first_name);";
     
     $pdo->exec($sql);
-    echo "Students inserted successfully or already exist.";
+    // echo "Students inserted successfully or already exist.";
 } catch (PDOException $e) {
-    echo "Error inserting students: " . $e->getMessage();
+    // echo "Error inserting students: " . $e->getMessage();
 }
 
 // 6. ADD 10 grades into the grades table
@@ -151,9 +151,9 @@ try {
             ON DUPLICATE KEY UPDATE grade=VALUES(grade);";
     
     $pdo->exec($sql);
-    echo "Grades inserted successfully or already exist.";
+    // echo "Grades inserted successfully or already exist.";
 } catch (PDOException $e) {
-    echo "Error inserting grades: " . $e->getMessage();
+    // echo "Error inserting grades: " . $e->getMessage();
 }
 
 ?>
