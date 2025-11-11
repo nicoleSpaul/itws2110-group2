@@ -1,5 +1,4 @@
 <?php
-// Create a PDO connection using ENV variables (set these in your server or .env)
 
 $host = getenv('DB_HOST') ?: '';
 $port = getenv('DB_PORT') ?: '';
