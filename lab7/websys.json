@@ -2,14 +2,46 @@
     "websys_course": {
         "lectures": {
             "lecture1": {
-                "title": "",
-                "description": ""
+                "title": "Web Systems Development",
+                "description": "This lecture covers introductions as well as a review of the syllabus and expectations for the Web Sys course."
             },
             "lecture2": {
+                "title": "The Basics (refresh your memory)",
+                "description": "This lecture is a review from Intro to ITWS, going over topics like: Servers - Hosting, Ports and Protocol, URI schemes, DNS, HTTP, HTTPS, 3 tier model, Idempotence, Requests and Responses."
+            },
+            "lecture3": {
+                "title": "Cascading Style Sheets (CSS)",
+                "description": "This lecture begins witha review of Semantics vs Presentation, then covers major CSS topics like: Anatomy of a Style Sheet & CSS rule, CSS Selectors (Atrribute & Pseudo), CSS Pseudo-classes & Pseudo Elements, Properties, Units, Box Model, Specificity, and \"Why CSS?\"."
+            },
+            "lecture4": {
+                "title": "CSS",
+                "description": "This lecture is Part 2 of previous, covering: CSS Combinators, Animations, CSS Rules, Minification, and Bootstrap."
+            },
+            "lecture5": {
+                "title": "JavaScript",
+                "description": "This lecture covers: What JavaScript is, Typing, Why JavaScript is Useful, Using JavaScript - When not to use it, Adding JavaScript, Writing JavaScript - Language Elements (Comments, Variables, Values, Operators, Control Structures, Functions), DOM & CSS, and Events."
+            },
+            "lecture6": {
                 "title": "",
                 "description": ""
             },
-            "lecture3": {
+            "lecture7": {
+                "title": "",
+                "description": ""
+            },
+            "lecture8": {
+                "title": "",
+                "description": ""
+            },
+            "lecture9": {
+                "title": "",
+                "description": ""
+            },
+            "lecture10": {
+                "title": "",
+                "description": ""
+            },
+            "lecture11": {
                 "title": "",
                 "description": ""
             }
