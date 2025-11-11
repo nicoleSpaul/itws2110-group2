@@ -203,6 +203,7 @@ $course = $data["websys_course"];
     <div id="content">
         <h2>Select a lecture or lab</h2>
         <p></p>
+        <button>Archive</button>
     </div>
     <script>
     document.querySelectorAll('.item').forEach(item => {
