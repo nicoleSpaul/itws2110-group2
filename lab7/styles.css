@@ -1,0 +1,14 @@
+.sidebar {
+   background-color: rgb(54, 0, 108);
+}
+.item-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

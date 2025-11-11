@@ -52,3 +52,31 @@ try {
     }
 }
 ?>
+
+<?php
+$jsonData = file_get_contents("websys.json");
+$data = json_decode($jsonData, true);
+$course = $data["websys_course"];
+?>
+
+<div class="sidebar">
+    <h1>Web Systems Content</h1>
+    <h2>Lectures</h2>
+    <div class="item-list">
+        <?php foreach ($course["lectures"] as $key => $lecture): ?>
+            <div class="item">
+                <h3><?= htmlspecialchars($lecture["title"] ?: ucfirst($key)) ?></h3>
+                <p><?= htmlspecialchars($lecture["description"] ?: "No description available.") ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <h2>Labs</h2>
+    <div class="item-list">
+        <?php foreach ($course["labs"] as $key => $lab): ?>
+            <div class="item">
+                <h3><?= htmlspecialchars($lab["title"] ?: ucfirst($key)) ?></h3>
+                <p><?= htmlspecialchars($lab["description"] ?: "No description available.") ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
