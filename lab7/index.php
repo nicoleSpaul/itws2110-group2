@@ -1,6 +1,70 @@
 <?php
 require_once __DIR__ . '/db.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'refresh') {
+    
+    try {
+        $pdo->exec("USE websystems;");
+        $crn_to_fetch = 73048;
+        $sql_fetch = "SELECT details FROM courses WHERE crn = ?";
+        $stmt_fetch = $pdo->prepare($sql_fetch);
+        $stmt_fetch->execute([$crn_to_fetch]);
+        $result = $stmt_fetch->fetch(PDO::FETCH_ASSOC);
+
+        if (!$result || empty($result['details'])) {
+            die("Error: Could not find source JSON in courses table for CRN $crn_to_fetch.");
+        }
+
+        $json_data_from_db = $result['details'];
+        
+        $pdo->exec("TRUNCATE TABLE course_content;");
+
+        $data = json_decode($json_data_from_db, true);
+        $course_data = $data['websys_course'];
+
+        $sql_insert = "INSERT INTO course_content (content_type, title, description) 
+                       VALUES (:type, :title, :desc)";
+        $stmt_insert = $pdo->prepare($sql_insert);
+
+        foreach ($course_data['lectures'] as $key => $lecture) {
+            $stmt_insert->execute([
+                ':type' => $key, 
+                ':title' => $lecture['title'] ?: ucfirst($key), 
+                ':desc' => $lecture['description']
+            ]);
+        }
+
+        foreach ($course_data['labs'] as $key => $lab) {
+            $stmt_insert->execute([
+                ':type' => $key,
+                ':title' => $lab['title'] ?: ucfirst($key),
+                ':desc' => $lab['description']
+            ]);
+        }
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+
+    } catch (PDOException $e) {
+        die("Error during refresh: " . $e->getMessage());
+    }
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['archive_id'])) {
+    try {
+        $pdo->exec("USE websystems;");
+        $id_to_delete = $_POST['archive_id'];
+        
+        $sql_delete = "DELETE FROM course_content WHERE id = ?";
+        $stmt_delete = $pdo->prepare($sql_delete);
+        $stmt_delete->execute([$id_to_delete]);
+        
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+
+    } catch (PDOException $e) {
+        echo "Error archiving item: " . $e->getMessage();
+    }
+}
+
 $sql = <<<SQL
 CREATE DATABASE IF NOT EXISTS websystems;
 USE websystems;
@@ -72,7 +136,6 @@ try {
     }
 }
 
-// 2. Add section and year fields to the courses table
 try {
     $sql = "ALTER TABLE courses
             ADD COLUMN section VARCHAR(10),
@@ -156,24 +219,28 @@ try {
     // echo "Error inserting grades: " . $e->getMessage();
 }
 
-try {
-    $sql = "ALTER TABLE courses
-            ADD COLUMN details JSON;";
-    $pdo->exec($sql);
-    // echo "Details column added to 'courses' table successfully.";
-} catch (PDOException $e) {
-    if ($e->errorInfo[1] == 1060) {
-        // echo "Details column already exists in 'courses' table.";
-    } else {
-        // echo "Error adding details column: " . $e->getMessage();
-    }
-}
 ?>
 
 <?php
-$jsonData = file_get_contents("websys.json");
-$data = json_decode($jsonData, true);
-$course = $data["websys_course"];
+try {
+    $lectures = [];
+    $labs = [];
+
+    $sql_lectures = "SELECT id, title, description FROM course_content 
+                     WHERE content_type LIKE 'lecture%' 
+                     ORDER BY id";
+    $lectures = $pdo->query($sql_lectures)->fetchAll(PDO::FETCH_ASSOC);
+    
+    $sql_labs = "SELECT id, title, description FROM course_content 
+                 WHERE content_type LIKE 'lab%' 
+                 ORDER BY id";
+    $labs = $pdo->query($sql_labs)->fetchAll(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    echo "Database query error: " . $e->getMessage();
+    $lectures = [];
+    $labs = [];
+}
 ?>
 
 <!DOCTYPE html>
@@ -190,24 +257,28 @@ $course = $data["websys_course"];
 <div class="site">
     <div class="sidebar-content">
         <h1>Web Systems Content</h1>
-        <button onclick="location.reload()">Refresh</button>
+        <button onclick="location.href = 'index.php?action=refresh'">Refresh</button>
         <h2>Lectures</h2>
         <ul>
-            <?php foreach ($course["lectures"] as $key => $lecture): ?>
+            <?php foreach ($lectures as $lecture): ?>
                 <li class="item" 
+                    data-id="<?= $lecture['id'] ?>" 
                     data-title="<?= htmlspecialchars($lecture["title"]) ?>"
                     data-description="<?= htmlspecialchars($lecture["description"]) ?>">
-                    <?= htmlspecialchars($lecture["title"] ?: ucfirst($key)) ?>
+                    
+                    <?= htmlspecialchars($lecture["title"]) ?>
                 </li>
             <?php endforeach; ?>
         </ul>
         <h2>Labs</h2>
         <ul>
-            <?php foreach ($course["labs"] as $key => $lab): ?>
+            <?php foreach ($labs as $lab): ?>
                 <li class="item"
+                    data-id="<?= $lab['id'] ?>"
                     data-title="<?= htmlspecialchars($lab["title"]) ?>"
                     data-description="<?= htmlspecialchars($lab["description"]) ?>">
-                    <?= htmlspecialchars($lab["title"] ?: ucfirst($key)) ?>
+                    
+                    <?= htmlspecialchars($lab["title"]) ?>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -220,6 +291,7 @@ $course = $data["websys_course"];
     <script>
     document.querySelectorAll('.item').forEach(item => {
         item.addEventListener('click', () => {
+            const id = item.dataset.id;
             const title = item.dataset.title;
             const desc = item.dataset.description;
 
@@ -227,6 +299,10 @@ $course = $data["websys_course"];
             main.innerHTML = `
                 <h2>${title}</h2>
                 <p>${desc}</p>
+                <form method="POST" action="">
+                    <input type="hidden" name="archive_id" value="${id}">
+                    <button type="submit">Archive</button>
+                </form>
             `;
         });
     });
