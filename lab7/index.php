@@ -156,6 +156,18 @@ try {
     // echo "Error inserting grades: " . $e->getMessage();
 }
 
+try {
+    $sql = "ALTER TABLE courses
+            ADD COLUMN details JSON;";
+    $pdo->exec($sql);
+    // echo "Details column added to 'courses' table successfully.";
+} catch (PDOException $e) {
+    if ($e->errorInfo[1] == 1060) {
+        // echo "Details column already exists in 'courses' table.";
+    } else {
+        // echo "Error adding details column: " . $e->getMessage();
+    }
+}
 ?>
 
 <?php
