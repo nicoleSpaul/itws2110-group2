@@ -14,24 +14,25 @@ ALTER TABLE courses
 ADD COLUMN section VARCHAR(10),
 ADD COLUMN year YEAR;
 
-3. CREATE a grades table containing id (int primary key, auto increment), crn (foreign key), RIN (foreign key), and grade (int 3 not null) 
+3. CREATE a grades table containing id (int primary key, auto increment), crn (foreign key), RIN (foreign key), and grade (int 3 not null)
 
 CREATE TABLE IF NOT EXISTS grades (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  crn INT(11) UNSIGNED NOT NULL,
-  RIN INT(9) UNSIGNED NOT NULL,
-  grade INT(3) NOT NULL,
-  FOREIGN KEY (crn) REFERENCES courses(crn),
-  FOREIGN KEY (RIN) REFERENCES students(RIN)
+id INT AUTO_INCREMENT PRIMARY KEY,
+crn INT(11) UNSIGNED NOT NULL,
+RIN INT(9) UNSIGNED NOT NULL,
+grade INT(3) NOT NULL,
+FOREIGN KEY (crn) REFERENCES courses(crn),
+FOREIGN KEY (RIN) REFERENCES students(RIN)
+PRIMARY KEY (crn, RIN)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 4. INSERT at least 4 courses into the courses table
 
 INSERT INTO courses (crn, prefix, number, title) VALUES
-            (37514, 'CSCI', 1100, 'Introduction to Computer Science'),
-            (37730, 'MATH', 2010, 'Multivar Calculus & Matrix Algebra'),
-            (73048, 'ITWS', 2110, 'Web Systems Development'),
-            (35797, 'PHYS', 1100, 'Physics I');
+(37514, 'CSCI', 1100, 'Introduction to Computer Science'),
+(37730, 'MATH', 2010, 'Multivar Calculus & Matrix Algebra'),
+(73048, 'ITWS', 2110, 'Web Systems Development'),
+(35797, 'PHYS', 1100, 'Physics I');
 
 5. INSERT at least 4 students into the students table
 
@@ -50,16 +51,16 @@ VALUES
 (37730, 662057098, 88),
 (73048, 662057097, 91),
 (35797, 662057096, 85),
-(37514, 662057099, 82),
-(37730, 662057098, 79),
-(73048, 662057097, 89),
-(35797, 662057096, 94),
-(37514, 662057099, 87),
-(37730, 662057098, 92);
+(37730, 662057099, 82),
+(35797, 662057098, 79),
+(35797, 662057097, 89),
+(37514, 662057096, 94),
+(73048, 662057099, 87),
+(73048, 662057098, 92);
 
 7. List all students in the following sequences; in lexicographical order by RIN, last name, RCSID, and first name. Remember that lexicographical order is determined by your collation.
 
-SELECT * FROM students ORDER BY RIN, last_name, RCSID, first_name;
+SELECT \* FROM students ORDER BY RIN, last_name, RCSID, first_name;
 
 8. List all students RIN, name, and address if their grade in any course was higher than a 90
 
@@ -90,6 +91,11 @@ In this lab, we had to collaborate with our groups to create a new version of LM
 
 This lab was the most challenging lab for me so far. It wasa difficult to understand how to view my php files since we were using AWS instead of Azure like we did in Intro to ITWS. However, after my group helped me out, I was able to complete the spooky CSS styling for part 4 and set up the side bar and main content area. I used online PHP resources to see how to do the refresh button and use PHP to add JSON data into the sidebar.
 
+## Courteney README
+
+This lab focused on collaborating on multiple tables within a database and displaying the data. We struggled initially to start the lab as we had only worked on our local machines so far in this class. Since we were only familar with Azure, it took time to understand how AWS works. I worked on setting up AWS and hosting our database on the cloud, this enabled us to work on the database simontanously. I also worked on part 1 of the lab, which was setting up the structure of courses and students tables. Additionally I worked on part 5 of integrating functionality into the refresh and archive buttons.
+
 Resources:
 https://www.w3schools.com/sql/sql_syntax.asp
 https://www.codecademy.com/article/sql-commands
+https://aws.amazon.com/rds/

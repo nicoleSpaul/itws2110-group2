@@ -1,50 +1,48 @@
 html {
-    margin: 0;
+  margin: 0;
 }
 .sidebar-content {
-    background-color: rgb(49, 0, 98);
-    font-family: "Pirata One", system-ui;
-    width: 250px;
-    height: 800px;
-    padding-left: 15px;
-    color:#fff
+  background-color: rgb(49, 0, 98);
+  font-family: "Pirata One", system-ui;
+  width: 250px;
+  padding-left: 15px;
+  color: #fff;
 }
 .item-list {
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .item {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .item:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .site {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #content {
-    font-family: "Pirata One", system-ui;
-    padding-left: 20px;
-    color: black;
-    
+  font-family: "Pirata One", system-ui;
+  padding-left: 20px;
+  color: black;
 }
 
 #content h2 {
-    font-family: "Nosifer", sans-serif
+  font-family: "Nosifer", sans-serif;
 }
 
 li {
-    list-style: none;
-    background-color: none;
+  list-style: none;
+  background-color: none;
 }
 
 h2 {
-    padding:0;
+  padding: 0;
 }
 
 .cobweb-img {
@@ -58,20 +56,24 @@ h2 {
 }
 
 button {
-    background-color: orange;
-    font-family: "Pirata One", system-ui;
-    border: 2px solid #333;
-    font-size: 2em;
+  background-color: orange;
+  font-family: "Pirata One", system-ui;
+  border: 2px solid #333;
+  font-size: 2em;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    font-size: 1.5em;
+  font-size: 1.5em;
+}
+
+#content p {
+  max-width: 60vw;
 }
