@@ -252,60 +252,62 @@ try {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 </head>
+<body>
+    <div class="site">
+        <div class="sidebar-content">
+            <h1>Web Systems Content</h1>
+            <button onclick="location.href = 'index.php?action=refresh'">Refresh</button>
+            <h2>Lectures</h2>
+            <ul>
+                <?php foreach ($lectures as $lecture): ?>
+                    <li class="item" 
+                        data-id="<?= $lecture['id'] ?>" 
+                        data-title="<?= htmlspecialchars($lecture["title"]) ?>"
+                        data-description="<?= htmlspecialchars($lecture["description"]) ?>">
+                        
+                        <?= htmlspecialchars($lecture["title"]) ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <h2>Labs</h2>
+            <ul>
+                <?php foreach ($labs as $lab): ?>
+                    <li class="item"
+                        data-id="<?= $lab['id'] ?>"
+                        data-title="<?= htmlspecialchars($lab["title"]) ?>"
+                        data-description="<?= htmlspecialchars($lab["description"]) ?>">
+                        
+                        <?= htmlspecialchars($lab["title"]) ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>Select a lecture or lab</h2>
+            <p></p>
+        </div>
+        <img src="spiderweb.png" alt="spiderweb" class="cobweb-img" >
+        <script>
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.dataset.id;
+                const title = item.dataset.title;
+                const desc = item.dataset.description;
 
-<div class="site">
-    <div class="sidebar-content">
-        <h1>Web Systems Content</h1>
-        <button onclick="location.href = 'index.php?action=refresh'">Refresh</button>
-        <h2>Lectures</h2>
-        <ul>
-            <?php foreach ($lectures as $lecture): ?>
-                <li class="item" 
-                    data-id="<?= $lecture['id'] ?>" 
-                    data-title="<?= htmlspecialchars($lecture["title"]) ?>"
-                    data-description="<?= htmlspecialchars($lecture["description"]) ?>">
-                    
-                    <?= htmlspecialchars($lecture["title"]) ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <h2>Labs</h2>
-        <ul>
-            <?php foreach ($labs as $lab): ?>
-                <li class="item"
-                    data-id="<?= $lab['id'] ?>"
-                    data-title="<?= htmlspecialchars($lab["title"]) ?>"
-                    data-description="<?= htmlspecialchars($lab["description"]) ?>">
-                    
-                    <?= htmlspecialchars($lab["title"]) ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-    <div id="content">
-        <h2>Select a lecture or lab</h2>
-        <p></p>
-        <button>Archive</button>
-    </div>
-    <script>
-    document.querySelectorAll('.item').forEach(item => {
-        item.addEventListener('click', () => {
-            const id = item.dataset.id;
-            const title = item.dataset.title;
-            const desc = item.dataset.description;
-
-            const main = document.getElementById('content');
-            main.innerHTML = `
-                <h2>${title}</h2>
-                <p>${desc}</p>
-                <form method="POST" action="">
-                    <input type="hidden" name="archive_id" value="${id}">
-                    <button type="submit">Archive</button>
-                </form>
-            `;
+                const main = document.getElementById('content');
+                main.innerHTML = `
+                    <h2>${title}</h2>
+                    <p>${desc}</p>
+                    <form method="POST" action="">
+                        <input type="hidden" name="archive_id" value="${id}">
+                        <button type="submit">Archive</button>
+                    </form>
+                `;
+            });
         });
-    });
-    </script>
-</div>
+        </script>
+    </div>
+    </body>
 </html>

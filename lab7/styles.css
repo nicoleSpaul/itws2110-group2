@@ -1,4 +1,4 @@
-html,body {
+html {
     margin: 0;
 }
 .sidebar-content {
@@ -15,11 +15,6 @@ html,body {
 }
 
 .item {
-    /* background-color: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
-    /* gap: 15px; */
     margin-bottom: 10px;
 }
 
@@ -33,9 +28,14 @@ html,body {
 }
 
 #content {
-   font-family: "Pirata One", system-ui;
-   padding-left: 20px;
-   color: black;
+    font-family: "Pirata One", system-ui;
+    padding-left: 20px;
+    color: black;
+    
+}
+
+#content h2 {
+    font-family: "Nosifer", sans-serif
 }
 
 li {
@@ -45,4 +45,33 @@ li {
 
 h2 {
     padding:0;
+}
+
+.cobweb-img {
+  height: 400px;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.5;
+}
+
+button {
+    background-color: orange;
+    font-family: "Pirata One", system-ui;
+    border: 2px solid #333;
+    font-size: 2em;
+}
+
+button:hover {
+    cursor: pointer;
+}
+body {
+  margin:0;
+  padding:0;
+}
+
+p {
+    font-size: 1.5em;
 }
