@@ -90,6 +90,10 @@ In this lab, we had to collaborate with our groups to create a new version of LM
 
 This lab was the most challenging lab for me so far. It wasa difficult to understand how to view my php files since we were using AWS instead of Azure like we did in Intro to ITWS. However, after my group helped me out, I was able to complete the spooky CSS styling for part 4 and set up the side bar and main content area. I used online PHP resources to see how to do the refresh button and use PHP to add JSON data into the sidebar.
 
+## Nicole README
+
+In this labs, we had to work together on one server to simulate a scaled down version of LMS working with PHP. I think my biggest challenge with this lab was getting PHP running on my computer using XAMPP, which I was finally able to do after help in-class and also from my groupmates. After getting it successfully working, I was able to work on Part 3 of the lab and I referenced our Lectures and Labs in order to create the JSON.
+
 Resources:
 https://www.w3schools.com/sql/sql_syntax.asp
 https://www.codecademy.com/article/sql-commands
