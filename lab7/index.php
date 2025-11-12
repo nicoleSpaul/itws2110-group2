@@ -154,12 +154,12 @@ try {
 // 3. Create a grades table containing id (int primary key, auto increment), crn (foreign key), RIN (foreign key), and grade (int 3 not null) 
 try {
     $sql = "CREATE TABLE IF NOT EXISTS grades (
-            id INT AUTO_INCREMENT PRIMARY KEY,
             crn INT(11) UNSIGNED NOT NULL,
             RIN INT(9) UNSIGNED NOT NULL,
             grade INT(3) NOT NULL,
             FOREIGN KEY (crn) REFERENCES courses(crn),
-            FOREIGN KEY (RIN) REFERENCES students(RIN)
+            FOREIGN KEY (RIN) REFERENCES students(RIN),
+            PRIMARY KEY (crn, RIN)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
     
     $pdo->exec($sql);
@@ -205,12 +205,12 @@ try {
             (37730, 662057098, 88),
             (73048, 662057097, 91),
             (35797, 662057096, 85),
-            (37514, 662057099, 82),
-            (37730, 662057098, 79),
-            (73048, 662057097, 89),
-            (35797, 662057096, 94),
-            (37514, 662057099, 87),
-            (37730, 662057098, 92)
+            (37730, 662057099, 82),
+            (35797, 662057098, 79),
+            (35797, 662057097, 89),
+            (37514, 662057096, 94),
+            (73048, 662057099, 87),
+            (73048, 662057098, 92)
             ON DUPLICATE KEY UPDATE grade=VALUES(grade);";
     
     $pdo->exec($sql);

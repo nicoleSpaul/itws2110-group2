@@ -1,88 +1,88 @@
 {
-    "websys_course": {
-        "lectures": {
-            "lecture1": {
-                "title": "Web Systems Development",
-                "description": "This lecture covers introductions as well as a review of the syllabus and expectations for the Web Sys course."
-            },
-            "lecture2": {
-                "title": "The Basics (refresh your memory)",
-                "description": "This lecture is a review from Intro to ITWS, going over topics like: Servers - Hosting, Ports and Protocol, URI schemes, DNS, HTTP, HTTPS, 3 tier model, Idempotence, Requests and Responses."
-            },
-            "lecture3": {
-                "title": "Cascading Style Sheets (CSS)",
-                "description": "This lecture begins witha review of Semantics vs Presentation, then covers major CSS topics like: Anatomy of a Style Sheet & CSS rule, CSS Selectors (Atrribute & Pseudo), CSS Pseudo-classes & Pseudo Elements, Properties, Units, Box Model, Specificity, and \"Why CSS?\"."
-            },
-            "lecture4": {
-                "title": "CSS",
-                "description": "This lecture is Part 2 of previous, covering: CSS Combinators, Animations, CSS Rules, Minification, and Bootstrap."
-            },
-            "lecture5": {
-                "title": "JavaScript",
-                "description": "This lecture covers: What JavaScript is, Typing, Why JavaScript is Useful, Using JavaScript - When not to use it, Adding JavaScript, Writing JavaScript - Language Elements (Comments, Variables, Values, Operators, Control Structures, Functions), DOM & CSS, and Events."
-            },
-            "lecture6": {
-                "title": "AJAX & JSON",
-                "description": "This lecture covers: JSON Format, Advantages, Uses, AJAX & jQuery."
-            },
-            "lecture7": {
-                "title": "APIs!!!",
-                "description": "This lecture introduces: APIs, API Styles (SOAP, REST) & History, Constraints, and Real-world API Examples."
-            },
-            "lecture8": {
-                "title": "Front End Optimization",
-                "description": "This lecture covers topics of: Performance, Minimizing Markup, Efficient Servers, ETags, Efficient Media, Efficient CSS, Efficent JavaScript, Efficient AJAX, Polling, and UX."
-            },
-            "lecture9": {
-                "title": "PHP & MySQL",
-                "description": "This lecture introduces: Databases, SQL Users, Connecting to Databases & MySQL, PDOs, Queries & Statements, and Sessions."
-            },
-            "lecture10": {
-                "title": "Intro to PHP - More About PHP",
-                "description": "This lecture continues: PHP Syntax, Datatypes, Operators, Control Structures, Functoins, Objects, Bsic Web I/O."
-            },
-            "lecture11": {
-                "title": "More PHP",
-                "description": "This lecture continues on topics: Interfaces, Overloading, Abstract Classes, and Polymorphism in PHP."
-            },
-            "lecture12": {
-                "title": "Authentication & Authorization",
-                "description": "This lecture covers: Authentication vs. Authorization, Better Password Storage, Password Salting, Permission Based Authorization, Role Based Authorization, and Combining Roles & Permissions."
-            }
-        },
-        "labs": {
-            "lab1": {
-                "title": "Lab 1",
-                "description": "In this lab, students created a group portfolio, using individual portfolios and incorporating microformats."
-            },
-            "lab2": {
-                "title": "Lab 2: “September 17th: Constitution Day” Lab (Constitution Week Lab)",
-                "description": "In this lab, students read various articles and amendments of the constitution, annotated, and displayed them in commemoration of Constitution Day."
-            },
-            "lab3": {
-                "title": "Lab 3 – JavaScript, AJAX, JSON, using APIs",
-                "description": "In this lab, students built a weather app with HTML using OpenWeather and an API of their choice."
-            },
-            "lab4": {
-                "title": "Lab 4",
-                "description": "In this lab, students were asked to remake their Lab 3 using only AI to generate the resources necessary for the lab, documenting the process."
-            },
-            "lab5": {
-                "title": "Lab 5 Part 1",
-                "description": "In this lab, students visited the Bloomberg terminals on campus, documenting the process, and learned how to do various operations in order to view live financial information about real-world companies."
-            },
-            "lab6": {
-                "title": "Lab 5 Part 2",
-                "description": "Students were asked to work in groups in order to write a 1 page report on strategies to incorporate socioeconomic and financial data available in the Bloomberg terminal into their in-class projects."
-            },
-            "lab7": {
-                "title": "Lab #6 - PHP, OOP and Input Handling",
-                "description": "Students were tasked in this lab with adding Subtraction, Multiplication, and Division functionality to a .php calculator and answer questions."
-            },
-            "lab8": {
-                "title": "Lab 7",
-                "description": "In this lab (the current one!) students were asked to create and host a server to display their php & database representing courses, students and grades, specifically allowing functionality to archive lecture and lab elements of the Web Sys course."
-            }
-        }
+  "websys_course": {
+    "lectures": {
+      "lecture1": {
+        "title": "Web Systems Development",
+        "description": "This lecture covers introductions as well as a review of the syllabus and expectations for the Web Sys course."
+      },
+      "lecture2": {
+        "title": "The Basics (refresh your memory)",
+        "description": "This lecture is a review from Intro to ITWS, going over topics like: Servers - Hosting, Ports and Protocol, URI schemes, DNS, HTTP, HTTPS, 3 tier model, Idempotence, Requests and Responses."
+      },
+      "lecture3": {
+        "title": "Cascading Style Sheets (CSS)",
+        "description": "This lecture begins witha review of Semantics vs Presentation, then covers major CSS topics like: Anatomy of a Style Sheet & CSS rule, CSS Selectors (Atrribute & Pseudo), CSS Pseudo-classes & Pseudo Elements, Properties, Units, Box Model, Specificity, and \"Why CSS?\"."
+      },
+      "lecture4": {
+        "title": "CSS",
+        "description": "This lecture is Part 2 of previous, covering: CSS Combinators, Animations, CSS Rules, Minification, and Bootstrap."
+      },
+      "lecture5": {
+        "title": "JavaScript",
+        "description": "This lecture covers: What JavaScript is, Typing, Why JavaScript is Useful, Using JavaScript - When not to use it, Adding JavaScript, Writing JavaScript - Language Elements (Comments, Variables, Values, Operators, Control Structures, Functions), DOM & CSS, and Events."
+      },
+      "lecture6": {
+        "title": "AJAX & JSON",
+        "description": "This lecture covers: JSON Format, Advantages, Uses, AJAX & jQuery."
+      },
+      "lecture7": {
+        "title": "APIs!!!",
+        "description": "This lecture introduces: APIs, API Styles (SOAP, REST) & History, Constraints, and Real-world API Examples."
+      },
+      "lecture8": {
+        "title": "Front End Optimization",
+        "description": "This lecture covers topics of: Performance, Minimizing Markup, Efficient Servers, ETags, Efficient Media, Efficient CSS, Efficent JavaScript, Efficient AJAX, Polling, and UX."
+      },
+      "lecture9": {
+        "title": "PHP & MySQL",
+        "description": "This lecture introduces: Databases, SQL Users, Connecting to Databases & MySQL, PDOs, Queries & Statements, and Sessions."
+      },
+      "lecture10": {
+        "title": "Intro to PHP - More About PHP",
+        "description": "This lecture continues: PHP Syntax, Datatypes, Operators, Control Structures, Functions, Objects, Basic Web I/O."
+      },
+      "lecture11": {
+        "title": "More PHP",
+        "description": "This lecture continues on topics: Interfaces, Overloading, Abstract Classes, and Polymorphism in PHP."
+      },
+      "lecture12": {
+        "title": "Authentication & Authorization",
+        "description": "This lecture covers: Authentication vs. Authorization, Better Password Storage, Password Salting, Permission Based Authorization, Role Based Authorization, and Combining Roles & Permissions."
+      }
+    },
+    "labs": {
+      "lab1": {
+        "title": "Lab 1",
+        "description": "In this lab, students created a group portfolio, using individual portfolios and incorporating microformats."
+      },
+      "lab2": {
+        "title": "Lab 2: “September 17th: Constitution Day” Lab (Constitution Week Lab)",
+        "description": "In this lab, students read various articles and amendments of the constitution, annotated, and displayed them in commemoration of Constitution Day."
+      },
+      "lab3": {
+        "title": "Lab 3: JavaScript, AJAX, JSON, using APIs",
+        "description": "In this lab, students built a weather app with HTML using OpenWeather and an API of their choice."
+      },
+      "lab4": {
+        "title": "Lab 4",
+        "description": "In this lab, students were asked to remake their Lab 3 using only AI to generate the resources necessary for the lab, documenting the process."
+      },
+      "lab5": {
+        "title": "Lab 5 Part 1",
+        "description": "In this lab, students visited the Bloomberg terminals on campus, documenting the process, and learned how to do various operations in order to view live financial information about real-world companies."
+      },
+      "lab6": {
+        "title": "Lab 5 Part 2",
+        "description": "Students were asked to work in groups in order to write a 1 page report on strategies to incorporate socioeconomic and financial data available in the Bloomberg terminal into their in-class projects."
+      },
+      "lab7": {
+        "title": "Lab 6: PHP, OOP and Input Handling",
+        "description": "Students were tasked in this lab with adding Subtraction, Multiplication, and Division functionality to a .php calculator and answer questions."
+      },
+      "lab8": {
+        "title": "Lab 7",
+        "description": "In this lab (the current one!) students were asked to create and host a server to display their php & database representing courses, students and grades, specifically allowing functionality to archive lecture and lab elements of the Web Sys course."
+      }
     }
+  }
 }
