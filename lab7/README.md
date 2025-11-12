@@ -86,6 +86,10 @@ GROUP BY c.crn;
 
 In this lab, we had to collaborate with our groups to create a new version of LMS for Web Systems. We faced challenges with understanding how to collaborate on the database and how to host the website on AWS. After these initial challenges, we were able to complete our parts. I worked on Part 2 of the lab where I had to use SQL to modify and create existing tables. I used online references to go over SQL syntax before performing the tasks.
 
+## Dana README
+
+This lab was the most challenging lab for me so far. It wasa difficult to understand how to view my php files since we were using AWS instead of Azure like we did in Intro to ITWS. However, after my group helped me out, I was able to complete the spooky CSS styling for part 4 and set up the side bar and main content area. I used online PHP resources to see how to do the refresh button and use PHP to add JSON data into the sidebar.
+
 Resources:
 https://www.w3schools.com/sql/sql_syntax.asp
 https://www.codecademy.com/article/sql-commands
