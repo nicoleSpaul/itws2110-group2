@@ -1,10 +1,10 @@
 <?php
 
-$host = getenv('DB_HOST') ?: 'websystems.cza8yasoo5ed.us-east-2.rds.amazonaws.com';
-$port = getenv('DB_PORT') ?: '3306';
-$db   = getenv('DB_NAME') ?: 'websystems';
-$user = getenv('DB_USER') ?: 'admin';
-$pass = getenv('DB_PASS') ?: 'DGJNTKzzL01Nwk1XFjxH';
+$host = getenv('DB_HOST') ?: '';
+$port = getenv('DB_PORT') ?: '';
+$db   = getenv('DB_NAME') ?: '';
+$user = getenv('DB_USER') ?: '';
+$pass = getenv('DB_PASS') ?: '';
 
 $charset = 'utf8mb4';
 
