@@ -95,6 +95,10 @@ This lab was the most challenging lab for me so far. It wasa difficult to unders
 
 This lab focused on collaborating on multiple tables within a database and displaying the data. We struggled initially to start the lab as we had only worked on our local machines so far in this class. Since we were only familar with Azure, it took time to understand how AWS works. I worked on setting up AWS and hosting our database on the cloud, this enabled us to work on the database simontanously. I also worked on part 1 of the lab, which was setting up the structure of courses and students tables. Additionally I worked on part 5 of integrating functionality into the refresh and archive buttons.
 
+## Nicole README
+
+In this labs, we had to work together on one server to simulate a scaled down version of LMS working with PHP. I think my biggest challenge with this lab was getting PHP running on my computer using XAMPP, which I was finally able to do after help in-class and also from my groupmates. After getting it successfully working, I was able to work on Part 3 of the lab and I referenced our Lectures and Labs in order to create the JSON.
+
 Resources:
 https://www.w3schools.com/sql/sql_syntax.asp
 https://www.codecademy.com/article/sql-commands
